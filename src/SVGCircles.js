@@ -1,6 +1,6 @@
 export const SVGCircles = ({ data, diameter, fill }) => {
     const toDisc = (i) => (
-      <circle r={diameter / 2} cx={i * diameter} cy={diameter} fill={fill} />
+      <circle r={i%2==1?diameter / 2:diameter/3} cx={i * diameter} cy={diameter} fill={fill} />
     );
   return (
       <div>

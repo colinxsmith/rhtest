@@ -12,7 +12,7 @@ export const Circles = ({ data, diameter, fill }) => {
         .append("circle")
         .attr("cx", (i) => i * diameter)
         .attr("cy", diameter)
-        .attr("r", (i)=> i%2==1?diameter / 2:diameter/3)
+        .attr("r", (i)=> i%2===1?diameter / 2:diameter/3)
         .attr("fill", "#F06E65");
     });
   return (

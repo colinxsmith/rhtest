@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="App">
       <Circles data={data} diameter={diameter} fill="#F06E65" />
-      <SVGCircles data={data} diameter={diameter} fill="#70332F" />
+      <SVGCircles data={data} diameter={diameter} fill="orange" />
     </div>
   );
 }

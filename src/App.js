@@ -7,14 +7,14 @@ import { SVGCircles } from "./SVGCircles";
 
 export default function App() {
   const data = Array(8)
-    .fill(0)
+    .fill("yellow")
     .map((_v, i) => i);
   const [diameter] = React.useState(50);
 
   return (
     <div className="App">
-      <Circles data={data} diameter={diameter} fill="#F06E65" />
-      <SVGCircles data={data} diameter={diameter} fill="orange" />
+      <Circles data={data} diameter={diameter} />
+      <SVGCircles data={data} diameter={diameter} />
     </div>
   );
 }

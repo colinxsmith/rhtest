@@ -13,8 +13,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <Circles data={data} diameter={diameter} />
       <SVGCircles data={data} diameter={diameter} />
+      <Circles data={data} diameter={diameter} />
     </div>
   );
 }

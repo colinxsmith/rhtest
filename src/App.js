@@ -7,7 +7,7 @@ import { SVGCircles } from "./SVGCircles";
 
 export default function App() {
   const data = Array(19)
-    .fill("yellow")
+    .fill(0)
     .map((_v, i) => i);
   const [diameter] = React.useState(50);
 

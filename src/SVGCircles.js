@@ -5,7 +5,7 @@ export const SVGCircles = ({ data, diameter }) => {
     setTimeout(() => {
       update();
     }, 0);
-  })
+  });
   const update = () => {
     d3.select("svg#svg1").selectAll("circle")
     //.data(data) This just sets following d as data[i]

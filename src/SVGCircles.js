@@ -7,13 +7,15 @@ export const SVGCircles = ({ data, diameter }) => {
     }, 0);
   })
   const update = () => {
-    d3.select("svg#svg1").selectAll("circle").each((d, i) => {
+    d3.select("svg#svg1").selectAll("circle")
+    //.data(data) This just sets following d as data[i]
+    .each((d, i) => {
       console.log(i);
       const pp = d3.select("svg#svg1").selectAll("circle").nodes()[i];
       d3.select(pp).transition()
         .duration(1000)
         .attrTween('cy', (d, i) => t => diameter * t)
-    })
+    });
   }
   const changer = (ii, orig, high = "black", back = 0) => {
     console.log("Index is " + ii);

@@ -1,6 +1,20 @@
 import React from "react"
 import * as d3 from "d3";
 export const SVGCircles = ({ data, diameter }) => {
+  React.useEffect(() => {
+    setTimeout(() => {
+      update();
+    }, 0);
+  })
+  const update = () => {
+    d3.select("svg#svg1").selectAll("circle").each((d, i) => {
+      console.log(i);
+      const pp = d3.select("svg#svg1").selectAll("circle").nodes()[i];
+      d3.select(pp).transition()
+        .duration(1000)
+        .attrTween('cy', (d, i) => t => diameter * t)
+    })
+  }
   const changer = (ii, orig, high = "black", back = 0) => {
     console.log("Index is " + ii);
     const pp = d3.select("svg#svg1").selectAll("circle").nodes()[ii];

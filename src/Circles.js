@@ -21,9 +21,12 @@ export const Circles = ({ data, diameter }) => {
       .attr("transform", `translate(${diameter / 2})`)
       .append("circle")
       .attr("cx", (i) => i * diameter)
-      .attr("cy", diameter)
+      //  .attr("cy", diameter)
       .attr("r", (i) => i % 2 === 0 ? diameter / 2 : diameter / 3)
-      .attr("fill", (i) => fill(i));
+      .attr("fill", (i) => fill(i))
+      .transition()
+      .duration(1000)
+      .attrTween('cy', (i) => t => diameter * t);
   });
   return (
     <div>

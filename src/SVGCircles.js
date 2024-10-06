@@ -37,7 +37,7 @@ export const SVGCircles = ({ data, diameter }) => {
       </circle>
   );
   return (
-    <div>
+    <div title="circles demo with SVG">
       <h3>SVG Circles</h3>
       <svg id="svg1" width="100%" height="300">
         <g transform={`translate(${diameter / 2})`}>

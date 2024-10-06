@@ -32,7 +32,7 @@ export const Circles = ({ data, diameter }) => {
     .selectAll("circle").append('title').text((_,i)=>`Title thing index${i}`);
   });
   return (
-    <div>
+    <div title="circles demo with D3">
       <h3>D3 Circles</h3>
       <svg
         ref={svg}

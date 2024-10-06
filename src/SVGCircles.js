@@ -12,9 +12,10 @@ export const SVGCircles = ({ data, diameter }) => {
     .each((d, i) => {
       console.log(i);
       const pp = d3.select("svg#svg1").selectAll("circle").nodes()[i];
+   //   d3.select(pp).select('title').text(`Title thing index: ${i}`)
       d3.select(pp).transition()
         .duration(1000)
-        .attrTween('cy', (d, i) => t => diameter * t)
+        .attrTween('cy', (d) => t => diameter * t)
     });
   }
   const changer = (ii, orig, high = "black", back = 0) => {
@@ -31,7 +32,9 @@ export const SVGCircles = ({ data, diameter }) => {
       cx={i * diameter} cy={diameter}
       fill={fill(i)}
       onPointerOver={() => changer(i, fill(i), "red", 1)}
-      onPointerLeave={() => changer(i, fill(i))} />
+      onPointerLeave={() => changer(i, fill(i))} >
+        <title>{"Title thing index::"+i}</title>
+      </circle>
   );
   return (
     <div>

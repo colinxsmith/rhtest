@@ -27,6 +27,9 @@ export const Circles = ({ data, diameter }) => {
       .transition()
       .duration(1000)
       .attrTween('cy', (i) => t => diameter * t);
+
+    d3.select(svg.current)
+    .selectAll("circle").append('title').text((_,i)=>`Title thing index${i}`);
   });
   return (
     <div>
